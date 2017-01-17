@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.apache.maven</groupId>
+  <artifactId>statement-processor</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>statement-processor</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  
+    <!-- https://mvnrepository.com/artifact/net.sf.jsefa/jsefa -->
+    <dependency>
+      <groupId>net.sf.jsefa</groupId>
+      <artifactId>jsefa</artifactId>
+      <version>1.1.0.RELEASE</version>
+    </dependency>
+    	
+    <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.5</version>
+    </dependency>
+
+    	
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+  </dependencies>
+  
+  <build>  
+    <plugins>  
+      <plugin>  
+        <groupId>org.codehaus.mojo</groupId>  
+        <artifactId>exec-maven-plugin</artifactId>  
+        <version>1.1.1</version>  
+        <executions>  
+          <execution>  
+            <phase>test</phase>  
+            <goals>  
+              <goal>java</goal>  
+            </goals>  
+            <configuration>  
+              <mainClass>org.apache.maven.statement_processor.App</mainClass>  
+            </configuration>  
+          </execution>  
+        </executions>  
+      </plugin>  
+    </plugins>  
+  </build> 
+
+</project>
